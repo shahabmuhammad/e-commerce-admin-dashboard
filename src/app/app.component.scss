@@ -1,0 +1,128 @@
+// /* Reset some default styles */
+// body,
+// ul {
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+// }
+
+// /* Style the header container */
+// .header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     background-color: #333;
+//     color: #fff;
+//     padding: 10px 20px;
+// }
+
+// /* Style the left-side container */
+// .lef-side {
+//     display: flex;
+//     align-items: center;
+// }
+
+// /* Style the logo */
+// .logo {
+//     width: 50px;
+//     height: 50px;
+//     background-color: #fff;
+//     /* Replace with your logo image */
+//     margin-right: 10px;
+// }
+
+// /* Style the menu icon */
+// .menu-icon {
+//     margin-left: 20px;
+//     font-size: 24px;
+//     cursor: pointer;
+// }
+
+// /* Style the right-side container */
+// .right-side {
+//     display: flex;
+//     align-items: center;
+// }
+
+// /* Style the navigation menu */
+// .nav ul {
+//     display: flex;
+//     padding: 0;
+// }
+
+// /* Style the navigation menu items */
+// .nav li {
+//     margin-right: 20px;
+//     font-weight: bold;
+//     cursor: pointer;
+// }
+
+// /* Style the user profile */
+// .user-profile {
+//     font-weight: bold;
+// }
+
+
+
+// .side-menu {
+//     width: 250px;
+//     /* Adjust the width as needed */
+//     background-color: #333;
+//     color: #fff;
+//     position: fixed;
+//     top: 0;
+//     left: -250px;
+//     /* Hide the menu by default */
+//     height: 100%;
+//     overflow-y: auto;
+//     transition: left 0.3s ease;
+// }
+
+// /* Style the menu header */
+// .side-menu-header {
+//     background-color: #444;
+//     padding: 10px;
+//     text-align: center;
+// }
+
+// /* Style the menu header text */
+// .side-menu-header h3 {
+//     margin: 0;
+// }
+
+// /* Style the menu list */
+// .side-menu ul {
+//     padding: 0;
+//     margin: 20px 0;
+// }
+
+// /* Style the menu items */
+// .side-menu li {
+//     padding: 10px 20px;
+//     cursor: pointer;
+//     transition: background-color 0.3s ease;
+// }
+
+// /* Highlight menu items on hover */
+// .side-menu li:hover {
+//     background-color: #555;
+// }
+
+// /* Style the active menu item */
+// .side-menu .active {
+//     background-color: #007bff;
+// }
+
+// /* Style the menu toggle button */
+// .menu-toggle {
+//     position: absolute;
+//     top: 10px;
+//     left: 10px;
+//     font-size: 24px;
+//     cursor: pointer;
+// }
+
+// /* Show the menu when it's active */
+// .side-menu.active {
+//     left: 0;
+// }

@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'e-commerce-admin-dashboard';
+
+
+  toggleSideMenu() {
+    const body:HTMLElement = document.body;
+    if (body) {
+      body.classList.toggle('toggle-sidebar');
+    }
+  }
 }
