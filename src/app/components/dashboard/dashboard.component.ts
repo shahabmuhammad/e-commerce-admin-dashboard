@@ -1,6 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { OrdersService } from '../../services/orders.service'
 import {
   ChartComponent,
   ApexAxisChartSeries,
@@ -14,6 +15,7 @@ import {
   ApexTitleSubtitle,
   ApexLegend
 } from "ng-apexcharts";
+import { HttpClientModule, HttpErrorResponse } from '@angular/common/http';
 
 export type ChartOptions = {
   series: ApexAxisChartSeries;
@@ -32,15 +34,16 @@ export type ChartOptions = {
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule, NgApexchartsModule],
+  imports: [CommonModule, NgApexchartsModule, HttpClientModule],
+  providers:[OrdersService],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit{
   @ViewChild("chart") chart!: ChartComponent;
   public chartOptions:ChartOptions
 
-  constructor() {
+  constructor(private orderService:OrdersService) {
     this.chartOptions = {
       series: [
         {
@@ -136,6 +139,17 @@ export class DashboardComponent {
         borderColor: "#f1f1f1"
       }
     };
+  }
+  ngOnInit(): void {
+    this.orderService.getAllOrders().subscribe({
+      next:(data)=>{
+        console.log(data)
+      },
+      error:(error:HttpErrorResponse)=>{
+        console.log(error)
+      }
+    }
+    )
   }
 }
 

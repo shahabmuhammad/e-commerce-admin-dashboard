@@ -21,10 +21,11 @@ body {
 }
 
 a {
-    color: #4154f1;
     text-decoration: none !important;
 }
-
+a.active{
+    color: #4154f1;
+}
 a:hover {
     color: #717ff5;
     text-decoration: none;
